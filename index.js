@@ -98,10 +98,16 @@ client.on('message', message =>{
         client.commands.get("sendinv").execute(client, message, args);
     }
     if(command === "joke"){
-        client.commands.get("joke").execute(message, args, Discord)
+        client.commands.get("joke").execute(message, args, Discord);
     }
     if(command === "unban"){
-        client.commands.get("unban").execute(message, args, Discord)
+        client.commands.get("unban").execute(message, args, Discord);
+    }
+    if(command === "p"){
+        client.command.get("p").execute(message, args);
+    }
+    if(command === "leave"){
+        client.commands.get("leave").execute(message, args);
     }
 });
 
