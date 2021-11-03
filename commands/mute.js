@@ -8,7 +8,7 @@ module.exports = {
         if (message.member.permissions.has("KICK_MEMBERS")) {
         if (target) {
  
-            let mainRole = message.guild.roles.cache.find(role => role.name === '💯|Member'); 
+            let mainRole = message.guild.roles.cache.find(role => role.name === '💯|Member');
             let muteRole = message.guild.roles.cache.find(role => role.name === 'muted');
  
             let memberTarget = message.guild.members.cache.get(target.id);

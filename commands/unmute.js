@@ -12,7 +12,7 @@ module.exports = {
  
             memberTarget.roles.remove(muteRole.id);
             memberTarget.roles.add(mainRole.id);
-            message.channel.send(`${target.username} is not muted anymore`);
+            message.channel.send(`<@${memberTarget.user.id}> is not muted anymore`);
         } else{
             message.reply('I cant find that user!');
             }

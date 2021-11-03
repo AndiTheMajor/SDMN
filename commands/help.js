@@ -7,7 +7,7 @@ module.exports = {
         .setTitle('Help')
         .setDescription('You can use this commands')
         .addFields(
-            {name: 'Help', value: '`ban` - Koristi kako bi banovao nekog\n\n `clear` - koristi kako bi obrisao odredjen broj poruka\n\n `kick` - koristi kako bi izbacio nekog sa servera\n\n `mute` - koristi kako bi mute nekoga\n\n ` unmute` - koristi kako bi unmute nekoga\n\n `p` - koristi kako bi pustio pesmu koju zelis\n\n `leave` - koristi kako bi izbacio bota iz kanala'}
+            {name: 'Help', value: 'Use `=help-fun` to see all comands for fun\n \n Use `=help-moderation` to see al commands for moderation'}
         )
         .setImage()
         .setFooter('Enjoy my commands');
