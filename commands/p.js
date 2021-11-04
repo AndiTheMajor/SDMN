@@ -32,8 +32,13 @@ module.exports = {
                 voiceChannel.leave();
                 message.channel.send('leaving channel');
             });
- 
-            await message.reply(`:thumbsup: Now Playing ***Your Link!***`)
+
+            let ballembed = new Discord.MessageEmbed()
+            .setAuthor(`PLAY`)
+            .setColor("RANDOM")
+            .addField(`:thumbsup: Now Playing ***Your Link!***`)
+
+            message.channel.send(ballembed);
  
             return
         }
