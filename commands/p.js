@@ -61,15 +61,9 @@ module.exports = {
             .on('finish', () =>{
                 voiceChannel.leave();
             });
-
-            let ballembed2 = new Discord.MessageEmbed()
-            .setAuthor(`PLAY`)
-            .setColor("RANDOM")
-            .addField(`:thumbsup: Now Playing ***${video.title}***`)
-
-            message.channel.send(ballembed2);
+            
  
-        
+            await message.reply(`:thumbsup: Now Playing ***${video.title}***`)
         } else {
             message.channel.send('No video results found');
         }
