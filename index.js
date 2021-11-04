@@ -104,7 +104,7 @@ client.on('message', message =>{
         client.commands.get("unban").execute(message, args, Discord);
     }
     if(command === "p"){
-        client.command.get("p").execute(message, args);
+        client.commands.get("p").execute(message, args);
     }
     if(command === "leave"){
         client.commands.get("leave").execute(message, args);
