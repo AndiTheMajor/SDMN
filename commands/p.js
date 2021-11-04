@@ -32,13 +32,8 @@ module.exports = {
                 voiceChannel.leave();
                 message.channel.send('leaving channel');
             });
-
-            let ballembed = new Discord.MessageEmbed()
-            .setAuthor(`PLAY`)
-            .setColor("RANDOM")
-            .addField(`:thumbsup: Now Playing ***Your Link!***`)
-
-            message.channel.send(ballembed);
+ 
+            await message.reply(`:thumbsup: Now Playing ***Your Link!***`)
  
             return
         }
@@ -61,7 +56,6 @@ module.exports = {
             .on('finish', () =>{
                 voiceChannel.leave();
             });
-            
  
             await message.reply(`:thumbsup: Now Playing ***${video.title}***`)
         } else {
