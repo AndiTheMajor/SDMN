@@ -32,9 +32,14 @@ module.exports = {
                 voiceChannel.leave();
                 message.channel.send('leaving channel');
             });
- 
-            await message.reply(`:thumbsup: Now Playing ***Your Link!***`)
- 
+
+            let music = new Discord.MessageEmbed()
+            .setAuthor(`8 ball`)
+            .setColor("RANDOM")
+            .addField("Song:", `${video.title}`)
+            
+            message.channel.send(music);
+
             return
         }
  
@@ -56,8 +61,14 @@ module.exports = {
             .on('finish', () =>{
                 voiceChannel.leave();
             });
+
+            let song = new Discord.MessageEmbed()
+            .setAuthor(`8 ball`)
+            .setColor("RANDOM")
+            .addField("Song:", `${video.title}`)
+            
+            message.channel.send(song);
  
-            await message.reply(`:thumbsup: Now Playing ***${video.title}***`)
         } else {
             message.channel.send('No video results found');
         }
