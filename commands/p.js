@@ -35,7 +35,7 @@ module.exports = {
             });
 
             let music = new Discord.MessageEmbed()
-            .setAuthor(`8 ball`)
+            .setAuthor(`SDMN`)
             .setColor("RANDOM")
             .addField("Song:", `${video.title}`)
             
@@ -64,7 +64,7 @@ module.exports = {
             });
 
             let song = new Discord.MessageEmbed()
-            .setAuthor(`8 ball`)
+            .setAuthor(`SDMN`)
             .setColor("RANDOM")
             .addField("Song:", `${video.title}`)
             
