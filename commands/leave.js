@@ -12,11 +12,10 @@ module.exports = {
         let song = new Discord.MessageEmbed()
         .setAuthor(`SDMN`)
         .setColor("WHITE")
-        .addField('Izasao sam iz kanala :smiling_face_with_tear:')
+        .addField('Izasao sam iz kanala :smiling_face_with_tear:',"uzivaj bez mene")
         
         message.channel.send(song);
         
-        await message.channel.send('Leaving channel :smiling_face_with_tear:')
  
     }
 }
