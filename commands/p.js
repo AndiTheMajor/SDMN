@@ -36,7 +36,7 @@ module.exports = {
 
             let music = new Discord.MessageEmbed()
             .setAuthor(`SDMN`)
-            .setColor("RANDOM")
+            .setColor("WHITE")
             .addField("Song:", `${video.title}`)
             
             message.channel.send(music);
@@ -65,7 +65,7 @@ module.exports = {
 
             let song = new Discord.MessageEmbed()
             .setAuthor(`SDMN`)
-            .setColor("RANDOM")
+            .setColor("WHITE")
             .addField("Song:", `${video.title}`)
             
             message.channel.send(song);
