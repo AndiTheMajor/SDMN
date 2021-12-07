@@ -7,7 +7,7 @@ module.exports = {
         .setTitle('Help')
         .setDescription('You can use this commands')
         .addFields(
-            {name: 'Help', value: 'Use `=help-fun` to see all comands for fun\n \n Use `=help-moderation` to see al commands for moderation'}
+            {name: 'Help', value: 'Use `!help-fun` to see all comands for fun\n \n Use `!help-moderation` to see al commands for moderation'}
         )
         .setImage()
         .setFooter('Enjoy my commands');
