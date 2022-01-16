@@ -55,6 +55,34 @@ module.exports = {
         }
  
         const video = await videoFinder(args.join(' '));
+        
+        	const song = {
+    id: video.id,
+    title: video.title,
+    url: video.url, 
+    durationmm: video.durationSeconds ? video.durationSeconds : video.duration / 1000,
+    channel: message.member.voice.channel.name,
+    uploadedby: video.channel.title, 
+    channelurl: `https://www.youtube.com/channel/${video.channel.id}`,
+    author: message.author,
+    durationh: video.duration.hours,
+    durationm: video.duration.minutes,
+    durations: video.duration.seconds, 
+    duration: video.duration
+};
+        const serverQueue = client.queue.get(message.guild.id);
+        if (!serverQueue) {
+		const queueConstruct = {
+			textChannel: messgae.channel,
+			voiceChannel: message.member.voice.channel,
+			connection: null,
+			songs: [],
+			volume: 50,
+			playing: true,
+            loop: false, 
+		};
+		client.queue.set(msg.guild.id, queueConstruct);
+		queueConstruct.songs.push(song);
  
         if(video){
             const stream  = ytdl(video.url, {filter: 'audioonly'});
@@ -74,4 +102,5 @@ module.exports = {
             message.channel.send('No video results found');
         }
     }
+}
 }

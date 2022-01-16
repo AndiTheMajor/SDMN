@@ -10,6 +10,9 @@ const { execute } = require('./commands/kick');
  
 client.commands = new Discord.Collection();
 
+
+client.queue = new Map()
+
  
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
