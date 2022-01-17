@@ -1,7 +1,7 @@
 const { handleVideo } = require("../../handlers/music");
 module.exports = {
 	meta: {
-		name: 'play',
+		name: 'p',
 		aliases: ['play'],
 		usage: '[link | args]',
 		description: 'Play',
