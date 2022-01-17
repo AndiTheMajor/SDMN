@@ -1,7 +1,18 @@
 module.exports = {
-    name: 'help',
-    description: "Ovo su embeds",
-    execute(message, args, Discord) {
+    meta: {
+        name: 'ban',
+        aliases: ['ban'],
+        usage: '[@member]',
+        description: 'ban cmd',
+        hasArgs: false,
+        category: 'ostalecmd',
+        devOnly: false,
+        perms: {
+            require: ["ADMINISTRATOR"]
+        },
+    },
+    pokreni: async (client, message, args, cfg, Discord) => {
+
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#40E0D0')
         .setTitle('Help')
@@ -13,5 +24,6 @@ module.exports = {
         .setFooter('Enjoy my commands');
 
         message.channel.send(newEmbed);
+        
     }
-}
+}          

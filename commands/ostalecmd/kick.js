@@ -1,8 +1,17 @@
 module.exports = {
-    name: 'kick',
-    description: "Ovo je _kick komanda.",
-    execute(message, args) {
-        const member = message.mentions.members.first();
+    meta: {
+        name: 'ban',
+        aliases: ['ban'],
+        usage: '[@member]',
+        description: 'ban cmd',
+        hasArgs: false,
+        category: 'ostalecmd',
+        devOnly: false,
+        perms: {
+            require: ["ADMINISTRATOR"]
+        },
+    },
+    pokreni: async (client, message, args, cfg, Discord) => {
 
         if (message.member.permissions.has("KICK_MEMBERS")) {
             if(member){
@@ -13,5 +22,6 @@ module.exports = {
                 message.reply('Please tag who do you want to kick');
             }
         }
+        
     }
-}
+} 

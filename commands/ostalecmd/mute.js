@@ -1,9 +1,18 @@
-const ms = require('ms');
 module.exports = {
-    name: 'mute',
-    description: "Ovo je _mute komanda",
-    execute(message, args) {
-        
+    meta: {
+        name: 'ban',
+        aliases: ['ban'],
+        usage: '[@member]',
+        description: 'ban cmd',
+        hasArgs: false,
+        category: 'ostalecmd',
+        devOnly: false,
+        perms: {
+            require: ["ADMINISTRATOR"]
+        },
+    },
+    pokreni: async (client, message, args, cfg, Discord) => {
+
         const target = message.mentions.users.first();
         if (message.member.permissions.has("KICK_MEMBERS")) {
         if (target) {
@@ -31,5 +40,6 @@ module.exports = {
             message.reply('Please tag who do you want to mute.');
             }
         }
-    }       
-} //a
+        
+    }
+} 

@@ -1,0 +1,17 @@
+{
+    "kategorije": [
+      "music",
+      "ostalecmd"
+    ],
+ 
+    "emojis": {
+      "yes": "<:yes:798143983338651699>",
+      "no": "<:no:798143958593044501>",
+      "music": "🎶"
+    },
+    "colors": {
+    "no": "#DC3A17",
+    "yes": "#3BDC17",
+    "main": "#4DE98D"
+  }
+  }
