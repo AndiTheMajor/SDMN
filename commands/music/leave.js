@@ -25,7 +25,7 @@ module.exports = {
 		serverQueue.songs = [];
 		client.queue.delete(message.guild.id);
 
-        serverQueue.connection.dispatcher.();
+        serverQueue.connection.dispatcher.end();
         message.guild.me.voice.channel.leave();
         message.channel.send("**:mailbox_with_no_mail: Successfully disconnected**");
     
