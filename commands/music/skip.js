@@ -15,7 +15,7 @@ module.exports = {
 	pokreni: async (client, message, args, cfg, Discord) => {
      
         const serverQueue = client.queue.get(message.guild.id);
-        if (!msg.member.voice.channel) return message.channel.send(':x: **You have to be in a voice channel to use this command.**');
+        if (!message.member.voice.channel) return message.channel.send(':x: **You have to be in a voice channel to use this command.**');
         if(!serverQueue) return message.channel.send(':x: **Nothing playing in this server**');
         const members = serverQueue.voiceChannel.members.filter(x => !x.user.bot);
         if(serverQueue.songs[0].requester.id !== message.author.id && members.size > 2){
