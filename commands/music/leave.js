@@ -12,22 +12,12 @@ module.exports = {
 		},
 	},
 	pokreni: async (client, message, args, cfg, Discord) => {
-		const serverQueue = client.queue.get(message.guild.id);
-
-        if(!message.member.voice.channel) {
-            return message.channel.send(":x: **You have to be in a voice channel to use this command.**")
-        }
         
-        if(!message.guild.me.voice.channel) {
-            return message.channel.send(":x: **I am not connected to a voice channel**, Use the summon command to get me in one")
-        }
-      
-		serverQueue.songs = [];
-		client.queue.delete(message.guild.id);
-
-        serverQueue.connection.dispatcher.end();
-        message.guild.me.voice.channel.leave();
-        message.channel.send("**:mailbox_with_no_mail: Successfully disconnected**");
+		const voiceChannel = message.member.voice.channel;
+ 
+        if(!voiceChannel) return message.channel.send("You need to be in a voice channel to stop the music!");
+        await voiceChannel.leave();
+        await message.channel.send('Leaving channel :smiling_face_with_tear:')
     
   }
 }
