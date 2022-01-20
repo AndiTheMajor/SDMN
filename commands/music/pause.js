@@ -26,7 +26,6 @@ module.exports = {
        serverQueue.connection.dispatcher.pause(true);
        return message.channel.send(`**Paused** ⏸️`);
      }
- if (serverQueue.connection.dispatcher.pause()); return msg .channel.send(`❌ **The player is already paused**`)
+ if (serverQueue.connection.dispatcher.pause()); return message .channel.send(`❌ **The player is already paused**`)
   }
 }
-

@@ -24,5 +24,3 @@ module.exports = {
     if (serverQueue.connection.dispatcher.resume()); return message.channel.send(`:x: **The player is not paused**`)
   }
 }
-
-//msg

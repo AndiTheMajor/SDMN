@@ -35,6 +35,6 @@
     "signale": "^1.4.0",
     "simple-youtube-api": "^5.2.1",
     "yt-search": "^2.10.3",
-    "ytdl-core": "^4.4.1"
+    "ytdl-core": "^4.10.0"
   }
 }
